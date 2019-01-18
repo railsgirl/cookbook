@@ -11,6 +11,20 @@
     <%= f.text_area :description %>
   </div> 
       
-  <%= f.submit %>
+
+  <div>
+  <h3>Ingredients</h3>
+  <div id='ingredients'>
+    <%= f.fields_for :ingredients do |ingredient| %>
+      <%= render 'ingredient_fields', :f => ingredient %>
+    <% end %>
+    <div class='links'>
+      <%= link_to_add_association 'Add ingredients', f, :ingredients %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
    
   <% end %>
