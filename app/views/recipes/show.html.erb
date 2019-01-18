@@ -3,6 +3,24 @@
 
 <p><%= @recipe.description %></p>
 
+<div id="ingredients">
+<h3> Ingredients </h3> 
+  <ul>
+    <% @recipe.ingredients.each do |ingredient| %>
+      <li><%= ingredient.name %></li>
+    <%end%>
+  </ul>
+</div>
+
+<div id="directions">
+<h3> Directions </h3> 
+  <ol>
+    <% @recipe.directions.each do |direction| %>
+      <li><%= direction.step %></li>
+    <%end%>
+  </ol>
+</div>
+
 <%= link_to 'Back', recipes_path %>
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> 
 <%= link_to 'Delete', recipe_path, method: :delete, data: {confirm: "Are you sure?"} %>
