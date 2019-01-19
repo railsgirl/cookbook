@@ -16,6 +16,8 @@ gem 'jquery-rails'
 gem 'mini_magick'
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem "aws-sdk-s3", require: false
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
