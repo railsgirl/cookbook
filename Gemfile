@@ -13,8 +13,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'cocoon'
 gem 'bootstrap'
 gem 'jquery-rails'
-# gem 'mini_magick', '~> 4.8'
+gem 'mini_magick'
 gem 'bootsnap', '>= 1.1.0', require: false
+
+gem "aws-sdk-s3", require: false
 
 group :development, :test do
   gem 'sqlite3'

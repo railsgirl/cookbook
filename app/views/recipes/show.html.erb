@@ -1,6 +1,10 @@
 
 <h1><%= @recipe.title %></h1>
 
+<p>
+  <%= image_tag @recipe.image.variant(resize: '470x300!') %>
+</p>
+
 <p><%= @recipe.description %></p>
 
 <div id="ingredients">

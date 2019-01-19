@@ -1,7 +1,9 @@
 <h1>CookBook</h1>
 
 <% @recipes.each do |recipe| %>
+    <%= image_tag recipe.image.variant(resize: '470x300!') if recipe.image.attached? %>
     <p><%= link_to recipe.title, recipe %><p>
+    
 <% end %>
 
 <br>
